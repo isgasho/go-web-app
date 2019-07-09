@@ -21,6 +21,6 @@ func CompileToWASM(c *cli.Context) {
 
 	fmt.Println(
 		chalk.Green.Color("\nCompiled successfully!\n"),
-		chalk.Blue.Color("\nNow start a dev server (cgwa dev)\n"),
+		chalk.Blue.Color("\nNow start a dev server (gwa dev)\n"),
 	)
 }

@@ -1,0 +1,1 @@
+wget -P /usr/local/bin 

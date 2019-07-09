@@ -3,6 +3,6 @@ version: '2'
 tasks:
   build:
     cmds:
-      - go build -o gwa *.go
+      - go build -o bin/gwa *.go
     sources:
       - ./*.go

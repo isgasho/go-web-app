@@ -129,9 +129,9 @@ func InitWebApp(c *cli.Context) {
 		"\nTo get started, go to project directory\n\n",
 		chalk.Blue.Color("cd "+appName),
 		"\n\nThen, compile to WebAssembly\n\n",
-		chalk.Blue.Color("cgwa build"),
+		chalk.Blue.Color("gwa build"),
 		"\n\nAnd start a development server\n\n",
-		chalk.Blue.Color("cgwa dev"),
+		chalk.Blue.Color("gwa dev"),
 		chalk.Bold.TextStyle("\n\nHappy coding!\n"),
 	)
 }

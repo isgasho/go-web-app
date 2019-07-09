@@ -20,21 +20,23 @@ Simple CLI for setting up Go WebAssembly frontend app.
 
 ## Install
 
+### Using Bash script
+
+```sh
+curl https://git.io/gwa/install.sh | bash
+```
+
 ### With `go get`
 
 ```sh
 go get github.com/talentlessguy/go-web-app
 ```
 
-Then use as `go-web-app` command
-
-### Using Bash script
-
-Coming soon...
+Then use as `go-web-app` command instead of `gwa`
 
 ## Commands 💻
 
-### `cgwa init`
+### `gwa init`
 
 Initialize a project.
 
@@ -51,11 +53,11 @@ Initialize a project.
 └── index.html
 ```
 
-### `cgwa dev --port <port>`
+### `gwa dev --port <port>`
 
 Launches a development server with specified port. Default port is 8080.
 
-### `cgwa build`
+### `gwa build`
 
 Compiles go code to WebAssembly. Compiled `out.wasm` file could be found in `build` folder.
 

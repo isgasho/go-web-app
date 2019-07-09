@@ -8,8 +8,8 @@ import (
 var app = cli.NewApp()
 
 func info() {
-	app.Name = "create-go-web-app"
-	app.Usage = "Create a web app for writing frontend Go code"
+	app.Name = "go-web-app"
+	app.Usage = "Simple CLI for setting up Go WebAssembly frontend app."
 	app.Author = "v1rtl (twitter.com/v1rtl)"
 	app.Version = "0.0.1"
 }
