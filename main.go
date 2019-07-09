@@ -11,7 +11,7 @@ func info() {
 	app.Name = "go-web-app"
 	app.Usage = "Simple CLI for setting up Go WebAssembly frontend app."
 	app.Author = "v1rtl (twitter.com/v1rtl)"
-	app.Version = "0.0.1"
+	app.Version = "0.0.2"
 }
 
 func commands() {
