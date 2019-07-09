@@ -20,7 +20,7 @@ func createDir(dir string) {
 func initGitRepo() {
 	cmd := exec.Command("git", "init")
 
-	fmt.Println(chalk.Blue.Color("Initializing a Git repository..."))
+	fmt.Println(chalk.Blue.Color("Initializing a Git repository...📕"))
 	err := cmd.Run()
 
 	if err != nil {
@@ -30,7 +30,7 @@ func initGitRepo() {
 
 func setupGlue() {
 
-	fmt.Println(chalk.Green.Color("Creating WebAssembly glue..."))
+	fmt.Println(chalk.Green.Color("Creating WebAssembly glue...🩹"))
 
 	// wasm_exec.js file
 
@@ -97,7 +97,7 @@ func helloWorld() {
 
 	mainGo, err := os.Create("main.go")
 
-	fmt.Println(chalk.Cyan.Color("Setting up Hello World..."))
+	fmt.Println(chalk.Cyan.Color("Setting up Hello World...🌍"))
 
 	if err != nil {
 		panic(err)
@@ -134,7 +134,7 @@ func InitWebApp(c *cli.Context) {
 	createOutputDir()
 
 	fmt.Println(
-		"Go Web app is ready!",
+		"Go Web app is ready! 🎉",
 		"\nTo get started, go to project directory\n\n",
 		chalk.Blue.Color("cd "+appName),
 		"\n\nThen, compile to WebAssembly\n\n",
