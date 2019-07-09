@@ -64,7 +64,13 @@ func setupGlue() {
 		<title>Go WebAssembly App</title>
 		<style>
 		body {
-			margin: 0
+			margin: 0;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			font-family: sans-serif
 		}
 		</style>
 	</head>
@@ -111,7 +117,7 @@ import "syscall/js"
 
 func main() {
 	document := js.Global().Get("document")
-	document.Get("body").Set("innerHTML", "<div style='height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; font-family: sans-serif'><h1>Congrats!</h1><h2> You just created a new app using <code>go-web-app</code> 🎉</h2><a href='https://github.com/talentlessguy/go-web-app'>Star the project ⭐</a></div>")
+	document.Get("body").Set("innerHTML", "<h1>Congrats!</h1><h2>You just created a new app using <code>go-web-app</code> 🎉</h2><a href='https://github.com/talentlessguy/go-web-app'>Star the project ⭐</a>")
 }`)
 }
 

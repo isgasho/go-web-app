@@ -1,5 +1,7 @@
 # go-web-app
 
+[![asciicast](https://asciinema.org/a/GSeiFaE6eomr73Sg4ZrQ4TFdy.svg)](https://asciinema.org/a/GSeiFaE6eomr73Sg4ZrQ4TFdy)
+
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/talentlessguy/create-go-web-app.svg?style=flat-square)
 [![Go Report Card](https://goreportcard.com/badge/github.com/talentlessguy/create-go-web-app?style=flat-square)](https://goreportcard.com/report/github.com/talentlessguy/create-go-web-app)
 
