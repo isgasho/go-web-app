@@ -1,6 +1,7 @@
-# create-go-web-app
+# go-web-app
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/talentlessguy/create-go-web-app.svg?style=flat-square)
+[![Go Report Card](https://goreportcard.com/badge/github.com/talentlessguy/create-go-web-app?style=flat-square)](https://goreportcard.com/report/github.com/talentlessguy/create-go-web-app)
 
 Simple CLI for setting up Go WebAssembly frontend app.
 
@@ -22,8 +23,10 @@ Simple CLI for setting up Go WebAssembly frontend app.
 ### With `go get`
 
 ```sh
-go get github.com/talentlessguy/create-go-web-app
+go get github.com/talentlessguy/go-web-app
 ```
+
+Then use as `go-web-app` command
 
 ### Using Bash script
 
