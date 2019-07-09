@@ -1,0 +1,8 @@
+version: '2'
+
+tasks:
+  build:
+    cmds:
+      - go build -o cgwa *.go
+    sources:
+      - ./*.go
