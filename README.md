@@ -18,12 +18,12 @@ Simple CLI for setting up Go WebAssembly frontend app.
 * TinyGo installed. Install [here](https://tinygo.org/getting-started)
 * Browser that supports WebAssembly (I use Mozilla Dev Edition 68)
 
-## Install
+## Install 🔄
 
 ### Using Bash script
 
 ```sh
-curl https://bit.ly/gwa-install | bash
+curl https://raw.githubusercontent.com/talentlessguy/go-web-app/master/install.sh | bash
 ```
 
 This will install `gwa` into `/usr/local/bin` so be sure that `/usr/local/bin` is in your `$PATH`.

@@ -12,7 +12,7 @@ func RunDevServer(c *cli.Context) {
 	port := c.String("port")
 
 	fmt.Println(
-		chalk.Bold.TextStyle("\nListening on http://localhost:"+port),
+		chalk.Bold.TextStyle("\n ▶ Listening on http://localhost:"+port),
 		chalk.Yellow.Color("\n\nShutdown server: Ctrl + C"),
 	)
 

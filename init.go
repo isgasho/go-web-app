@@ -97,7 +97,7 @@ func helloWorld() {
 
 	mainGo, err := os.Create("main.go")
 
-	fmt.Println(chalk.Cyan.Color("Setting up Hello World...🌍"))
+	fmt.Println(chalk.Cyan.Color("Setting up Hello World..."))
 
 	if err != nil {
 		panic(err)
@@ -111,7 +111,7 @@ import "syscall/js"
 
 func main() {
 	document := js.Global().Get("document")
-	document.Get("body").Set("innerHTML", "<div style='height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; font-family: sans-serif'><h1>Congrats!</h1><h2> You just created a new app using <code>go-web-app</code> 🎉</h2><a href='https://github.com/talentlessguy/go-web-app'>Star a repo ⭐</a></div>")
+	document.Get("body").Set("innerHTML", "<div style='height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; font-family: sans-serif'><h1>Congrats!</h1><h2> You just created a new app using <code>go-web-app</code> 🎉</h2><a href='https://github.com/talentlessguy/go-web-app'>Star the project ⭐</a></div>")
 }`)
 }
 
@@ -134,7 +134,7 @@ func InitWebApp(c *cli.Context) {
 	createOutputDir()
 
 	fmt.Println(
-		"Go Web app is ready! 🎉",
+		"Go Web app is ready!",
 		"\nTo get started, go to project directory\n\n",
 		chalk.Blue.Color("cd "+appName),
 		"\n\nThen, compile to WebAssembly\n\n",
