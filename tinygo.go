@@ -11,7 +11,7 @@ import (
 func CompileToWASM(c *cli.Context) {
 	cmd := exec.Command("tinygo", "build", "-o", "build/out.wasm", "./src")
 
-	fmt.Println(chalk.Magenta.Color("Compiling to WebAssembly..."))
+	fmt.Println(chalk.Magenta.Color("\nCompiling to WebAssembly..."))
 
 	err := cmd.Run()
 

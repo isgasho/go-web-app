@@ -15,7 +15,7 @@ Simple CLI for setting up Go WebAssembly frontend app.
 ## Requirements ✅
 
 * Go 1.12+ (I have Go 1.12.4)
-* tinygo installed. Install [here](https://tinygo.org/getting-started)
+* TinyGo installed. Install [here](https://tinygo.org/getting-started)
 * Browser that supports WebAssembly (I use Mozilla Dev Edition 68)
 
 ## Install
@@ -23,8 +23,10 @@ Simple CLI for setting up Go WebAssembly frontend app.
 ### Using Bash script
 
 ```sh
-curl https://git.io/gwa/install.sh | bash
+curl https://bit.ly/gwa-install | bash
 ```
+
+This will install `gwa` into `/usr/local/bin` so be sure that `/usr/local/bin` is in your `$PATH`.
 
 ### With `go get`
 
@@ -55,7 +57,11 @@ Initialize a project.
 
 ### `gwa dev --port <port>`
 
-Launches a development server with specified port. Default port is 8080.
+Launches a development server with specified port.
+
+Default port is **8080**.
+
+After launching a server, you should go to `http://localhost:<port>`
 
 ### `gwa build`
 
