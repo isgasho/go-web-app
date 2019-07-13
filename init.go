@@ -93,6 +93,39 @@ func setupGlue() {
 	</html>`)
 }
 
+// Create go.mod file
+func goModule(appName string) {
+	cmd := exec.Command("go", "mod", "init", appName)
+
+	err := cmd.Run()
+
+	fmt.Println(chalk.Magenta.Color("Initializng go module..."))
+
+	if err != nil {
+		panic(err)
+	}
+}
+
+func createReadme(appName string) {
+	readme, err := os.Create("README.md")
+
+	fmt.Println(chalk.Red.Color("Adding README..."))
+
+	if err != nil {
+		panic(err)
+	}
+
+	defer readme.Close()
+
+	readme.WriteString("# " + appName + "\n")
+	readme.WriteString("\n**Built with [go-web-app 📦](https://github.com/talentlessguy/go-web-app)**\n")
+	readme.WriteString("\n## Installation\n")
+	readme.WriteString("\n```sh\ngit clone https://github.com/user/app\ngo mod download\n```\n")
+	readme.WriteString("\n## Running the app (using gwa)\n")
+	readme.WriteString("\n```sh\ngwa build && gwa dev\n```\n")
+}
+
+// Setup basic example
 func helloWorld() {
 
 	createDir("src")
@@ -121,6 +154,7 @@ func main() {
 }`)
 }
 
+// Create directory for wasm output
 func createOutputDir() {
 	os.Chdir("..")
 	createDir("build")
@@ -133,8 +167,11 @@ func InitWebApp(c *cli.Context) {
 
 	// Create a project directory
 	createDir(appName)
+	// Go to project
 	os.Chdir(appName)
 	initGitRepo()
+	goModule(appName)
+	createReadme(appName)
 	setupGlue()
 	helloWorld()
 	createOutputDir()

@@ -12,6 +12,7 @@ Simple CLI for setting up Go WebAssembly frontend app.
 * Dev Server
 * [TinyGo](https://tinygo.org) for small WebAssembly output
 * Git setup
+* README file
 * Glue files (`index.html` + `wasm_exec.js`)
 
 ## Requirements ✅
@@ -49,12 +50,14 @@ Initialize a project.
 `out.wasm` is generated when building. Other files are automatically added.
 
 ```text
-├── build
-│   └── out.wasm
 ├── src
 │   └── main.go
-├── wasm_exec.js
-└── index.html
+├── build
+│   └── out.wasm
+├── go.mod
+├── index.html
+├── README.md
+└── wasm_exec.js
 ```
 
 ### `gwa dev --port <port>`

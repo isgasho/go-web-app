@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/ttacon/chalk"
 	"github.com/urfave/cli"
+	"os"
 	"os/exec"
 )
 
@@ -19,8 +20,21 @@ func CompileToWASM(c *cli.Context) {
 		panic(err)
 	}
 
+	file, err := os.Open("build/out.wasm")
+
+	if err != nil {
+		panic(err)
+	}
+
+	defer file.Close()
+
+	stat, err := file.Stat()
+
 	fmt.Println(
 		chalk.Green.Color("\nCompiled successfully! ✨\n"),
+		chalk.Yellow.Color("\nBundle Size:"),
+		stat.Size()/1024,
+		"Kb\n",
 		chalk.Blue.Color("\nNow start a dev server (gwa dev)\n"),
 	)
 }
