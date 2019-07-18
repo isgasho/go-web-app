@@ -24,7 +24,7 @@
 ### Using Bash script
 
 ```sh
-curl https://raw.githubusercontent.com/talentlessguy/go-web-app/master/install.sh | bash
+curl -L https://bit.ly/gwa-install | bash
 ```
 
 This will install `gwa` into `/usr/local/bin` so be sure that `/usr/local/bin` is in your `$PATH`.
@@ -71,3 +71,5 @@ After launching a server, you should go to `http://localhost:<port>`
 Compiles go code to WebAssembly. Compiled `out.wasm` file could be found in `build` folder.
 
 Everything in `src` compiles to `build`, every go file.
+
+After build, binary size is shown
