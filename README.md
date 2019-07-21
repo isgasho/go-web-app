@@ -2,6 +2,7 @@
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/talentlessguy/create-go-web-app.svg?style=flat-square)
 [![Go Report Card](https://goreportcard.com/badge/github.com/talentlessguy/create-go-web-app?style=flat-square)](https://goreportcard.com/report/github.com/talentlessguy/create-go-web-app)
+[![Codacy grade](https://img.shields.io/codacy/grade/c3198e0739ec48bba8902b83a02c3a55.svg?style=flat-square)](https://app.codacy.com/app/komfy/go-web-app)
 
 **Simple CLI for setting up Go WebAssembly frontend app.**
 
@@ -24,7 +25,7 @@
 ### Using Bash script
 
 ```sh
-curl -L https://bit.ly/gwa-install | bash
+sudo curl -L https://bit.ly/gwa-install | bash
 ```
 
 This will install `gwa` into `/usr/local/bin` so be sure that `/usr/local/bin` is in your `$PATH`.

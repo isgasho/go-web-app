@@ -1,5 +1,5 @@
 echo 'Downloading go-web-app binary...'
-curl -o /usr/local/bin/gwa https://raw.githubusercontent.com/talentlessguy/go-web-app/master/bin/gwa
+curl -o /usr/local/bin/gwa -L https://bit.ly/go-web-app
 
 chmod +x /usr/local/bin/gwa
 echo 'Done! Type "gwa" to ensure it works'
