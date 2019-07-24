@@ -40,9 +40,9 @@ Then use as `go-web-app` command instead of `gwa`
 
 ## Commands 💻
 
-### `gwa init`
+### `gwa init <app name>`
 
-Initialize a project.
+Initialize a project in a picked directory.
 
 #### Project tree
 
