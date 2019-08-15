@@ -1,8 +1,10 @@
 package main
 
 import (
-	"github.com/urfave/cli"
+	"log"
 	"os"
+
+	"github.com/urfave/cli"
 )
 
 var app = cli.NewApp()
@@ -11,7 +13,7 @@ func info() {
 	app.Name = "go-web-app"
 	app.Usage = "Simple CLI for setting up Go WebAssembly frontend app."
 	app.Author = "v1rtl (twitter.com/v1rtl)"
-	app.Version = "0.0.3"
+	app.Version = "0.0.4"
 }
 
 func commands() {
@@ -47,6 +49,6 @@ func main() {
 
 	err := app.Run(os.Args)
 	if err != nil {
-		panic(err)
+		log.Fatal("Failed to run go-web-app")
 	}
 }

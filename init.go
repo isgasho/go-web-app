@@ -2,17 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/ttacon/chalk"
-	"github.com/urfave/cli"
+	"log"
 	"os"
 	"os/exec"
+
+	"github.com/ttacon/chalk"
+	"github.com/urfave/cli"
 )
 
 // Create a project directory
 func createDir(dir string) {
 	err := os.MkdirAll(dir, 0755)
 	if err != nil {
-		panic(err)
+		log.Fatal("Please give your project a name")
 	}
 	os.Chdir(dir)
 }
@@ -24,7 +26,7 @@ func initGitRepo() {
 	err := cmd.Run()
 
 	if err != nil {
-		panic(err)
+		log.Fatal("Failed to create a git repo")
 	}
 }
 
@@ -37,7 +39,7 @@ func setupGlue() {
 	wasmExec, err := os.Create("wasm_exec.js")
 
 	if err != nil {
-		panic(err)
+		log.Fatal("Failed to copy wasm_exec")
 	}
 
 	defer wasmExec.Close()
@@ -50,7 +52,7 @@ func setupGlue() {
 	indexHTML, err := os.Create("index.html")
 
 	if err != nil {
-		panic(err)
+		log.Fatal("Failed to create index.html")
 	}
 
 	defer indexHTML.Close()
@@ -88,10 +90,10 @@ func goModule(appName string) {
 
 	err := cmd.Run()
 
-	fmt.Println(chalk.Magenta.Color("Initializng go module..."))
+	fmt.Println(chalk.Magenta.Color("Initializing go module..."))
 
 	if err != nil {
-		panic(err)
+		log.Fatal("Failed to create go module.")
 	}
 }
 
@@ -101,7 +103,7 @@ func createReadme(appName string) {
 	fmt.Println(chalk.Red.Color("Adding README..."))
 
 	if err != nil {
-		panic(err)
+		log.Fatal("Failed to create README")
 	}
 
 	defer readme.Close()
@@ -128,7 +130,7 @@ func helloWorld() {
 	fmt.Println(chalk.Cyan.Color("Setting up Hello World..."))
 
 	if err != nil {
-		panic(err)
+		log.Fatal("Failed to create main.go")
 	}
 
 	defer mainGo.Close()
