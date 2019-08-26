@@ -26,7 +26,7 @@ func commands() {
 		{
 			Name:   "build",
 			Usage:  "Compile Go to WebAssembly",
-			Action: CompileToWASM,
+			Action: CompileToWASMCLI,
 		},
 		{
 			Name:   "dev",

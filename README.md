@@ -13,12 +13,13 @@
 * Git setup
 * README file
 * Glue files (`index.html` + `wasm_exec.js`)
+* Auto-reload
 
 ## Requirements ✅
 
 * Go 1.12+ (I have Go 1.12.4)
-* TinyGo installed. Install [here](https://tinygo.org/getting-started)
-* Browser that supports WebAssembly (I use Mozilla Dev Edition 68)
+* TinyGo installed. Setup [here](https://tinygo.org/getting-started)
+* Browser that supports WebAssembly
 
 ## Install 🔄
 

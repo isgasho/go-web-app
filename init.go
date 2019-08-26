@@ -79,6 +79,29 @@ func setupGlue() {
 				go.run(result.instance)
 				WebAssembly.instantiate(result.module, go.importObject)
 			})
+
+			const tryConnectToReload = address => {
+        const conn = new WebSocket(address)
+
+        conn.onclose = () => {
+          setTimeout(() => {
+            tryConnectToReload(address)
+          }, 2000)
+        }
+
+        conn.onmessage = evt => location.reload()
+      }
+      try {
+        if (window.WebSocket) {
+          // The reload endpoint is hosted on a statically defined port.
+          tryConnectToReload('ws://localhost:8080/reload')
+        } else {
+          console.log( 'Your browser does not support WebSockets :(')
+        }
+      } catch (e) {
+        console.error('Exception during connecting to Reload: ' + e)
+      }
+
 		</script>
 	</body>
 	</html>`)
