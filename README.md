@@ -26,7 +26,7 @@
 ### Using Bash script
 
 ```sh
-sudo curl -L https://bit.ly/gwa-install | bash
+curl -L https://bit.ly/gwa-install | sudo bash
 ```
 
 This will install `gwa` into `/usr/local/bin` so be sure that `/usr/local/bin` is in your `$PATH`.
